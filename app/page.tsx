@@ -5,7 +5,7 @@ import styles from "./page.module.css";
 const DAILY_LIMIT = 2;
 const todayKey = () => `used-${new Date().toISOString().slice(0, 10)}`;
 
-export default function Home() {
+export default function Home() {useEffect(() => { localStorage.clear(); }, []);
   const [dream, setDream] = useState("");
   const [reply, setReply] = useState("");
   const [loading, setLoading] = useState(false);
